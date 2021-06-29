@@ -60,31 +60,86 @@ function dice(){
 /* Ex.2 
     Write a function called "whoIsBigger" which receives 2 numbers as parameters and returns the biggest one.
 */
-function whoIsBigger(1, 2){
-  return 
+function whoIsBigger(number1, number2){
+if(number1 < number2)
+   return number2
+else if(number1 === number2)
+   return 0
+else
+   return number1
 }
+ 
+
 /* Ex.3
     Write a function called "splitMe" which receives a string as a parameter and returns an array with every word in that string.
     Ex. splitMe("I love coding") => returns ["I", "Love", "Coding"]
 */
-
+function splitMe(str){
+  return str.split(' ')
+}
+console.log(splitMe('I enjoy coding'))
 /* Ex.4
     Write a function called "deleteOne" which receives a string and a boolean as parameters. If the boolean value is true it should return the string without the first letter, otherwise it should remove the last one from it.
 */
+const strparameter = 'string'
+const booleanparameter = true
+function deleteOne(strparameter, booleanparameter){
+if(booleanparameter === true){
+console.log(strparameter.slice(1,6))
+}else{
+  console.log(strparameter.slice(0,5))
+} 
+}
+console.log(deleteOne('string', false))
 
 /* Ex.5
    Write a function called "onlyLetters" which receives a string as a parameter and returns it removing all the digits.
    Ex.: onlyLetters("I have 4 dogs")  => returns "I have  dogs"
 */
-
+const strParameter = 'I have 3 siblings'
+const noNumbers = strParameter.replace(/[0-9]/g, '')
+function onlyLetters(strParameter){
+  return noNumbers
+}
+console.log(onlyLetters(noNumbers))
 /* Ex.6 
    Write a function called "isThisAnEmail" which receives a string as a parameter and returns true if the string is a valid email address.
 */
 
+function isThisAnEmail(theEmail, isEmailValid){
+if(isEmailValid === true)
+return theEmail
+}
+console.log(isThisAnEmail('zuxr.akhmedov@gmail.com',true))
 /* Ex.7
    Write a function called "whatDayIsIt" that should return the current day of the week.
 */
 
+function whatDayIsIt(Monday ,Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday){
+  switch(whatDayIsIt){
+    case Monday:
+      console.log('Today is Monday')
+      break;
+      case Tuesday :
+        console.log('Today is Tuesday')
+        break;
+        case Wednesday :
+        console.log('Today is Wednesday')
+        break;
+        case Thursday :
+        console.log('Today is Thursday')
+        break;
+        case Friday :
+        console.log('Today is Friday')
+        break;
+        case Saturday :
+        console.log('Today is Saturday')
+        break;
+        case Sunday :
+        console.log('Today is Sunday')
+        break;
+  }
+}
 /* Ex.8
     Write a function called "rollTheDices" which receives a number as a parameter.
     It should invoke the dice() function defined in Ex1 the specified amount of times,
@@ -95,7 +150,12 @@ function whoIsBigger(1, 2){
         values: [3, 3, 4]
     }
 */
-
+function rollTheDices(number){
+const sum = {
+values : [5, 5, 10]
+}
+return dice
+}
 /* Ex.9
    Write a function called "howManyDays" which receives a date as a parameter and should return the number of days passed since that date.
 */
@@ -103,17 +163,45 @@ function whoIsBigger(1, 2){
 /* Ex.10
    Write a function called "isTodayMyBirthday" which should return true if today's your birthday, false otherwise.
 */
-
+let myBirthDay = '10 March 2001'
+function isTodayMyBirthday(myBirthDay){
+  if(myBirthDay === isTodayMyBirthday){
+    return true
+  }else{
+    return false
+  }
+}
+console.log(isTodayMyBirthday('10 March 2001'))
 // JS Arrays // Objs
 // NOTE: movies array is defined at the end of this file!
 
 /* Ex.11
    Write a function called "deleteProp" which receives an object and a string as parameters, and returns the given object after deleting its property named as the given string.
 */
-
+const deleteProp = (obj, str) => {
+  for (let movie of obj){
+    console.log(movie)
+    console.log(movie[str])
+    console.log(movie.str !=movie[str])
+  }
+}
 /* Ex.12 
     Write a function called "olderMovie" which finds the oldest movie in the array provided at the end of this file.
 */
+function olderMovie(){
+  let oldest = olderMovie[0]
+  for (let i =0; i<olderMovie.length;i++){
+    console.log("index:",i)
+    console.log("value:",olderMovie[i])
+    if(olderMovie[i]>oldest){
+        console.log(olderMovie[i],"is more than the oldest:",oldest)
+        oldest = olderMovie[i]
+    }else{
+      console.log(olderMovie[i],"is NOT more than the oldest:", oldest)
+    }
+    console.log('--------------')
+  }
+}
 
 /* Ex.13
     Write a function called "countMovies" which returns the number of movies contained in the array provided at the end of this file.
